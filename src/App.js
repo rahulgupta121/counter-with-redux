@@ -15,9 +15,9 @@ function App() {
         </div>
 
         <div className="class-counter">
-        <a title='decrement' href='/' onClick={ ()=> dispatch(decNumber())}><span>-</span></a>
+        <li title='decrement' href='/' onClick={ ()=> dispatch(decNumber())}><span>-</span></li>
           <input value={myState}/>
-        <a href='/' title='increment' onClick={ ()=> dispatch(incNumber())} ><span>+</span></a>
+        <li href='/' title='increment' onClick={ ()=> dispatch(incNumber())} ><span>+</span></li>
         </div>
        
       </header>
