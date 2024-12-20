@@ -3,16 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import CookieConsent from "react-cookie-consent";
 
-import store from './store';
+import {store} from './app/store';
 import { Provider } from 'react-redux'
-store.subscribe(()=>console.log(store.getState()));
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
+    <CookieConsent
+  location="bottom"
+  buttonText="I Understand"
+  cookieName="myAwesomeCookieName2"
+  style={{ background: "rgb(29 152 193)", color:"black", }}
+  buttonStyle={{ color: "black", fontSize: "13px" }}
+  expires={30}
+>
+  This website uses cookies from us and our business partners to enhance your browsing experience. For more
+  information, including how to manage your cookie settings, please check our <a as="/">Privacy Policy</a> and <a as="/">Cookie Policy</a>.
+  
+</CookieConsent>
     <App />
     </Provider>
   </React.StrictMode>
