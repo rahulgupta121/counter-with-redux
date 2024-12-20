@@ -12,15 +12,18 @@ export const showSlice = createSlice({
     name : "showData",
     initialState ,
     reducers : {
-        // addData : ()=>{
-
-        // },
+        addData : (state)=>{
+            state.value = state.value + 1 ;
+        },
         showData : (state)=>{
             state.value = state.value;
-        }
+        },
+        decrementData : (state)=>{
+            state.value = state.value - 1 ;
+        },
     }
 })
 
-export const {addData, showData} = showSlice.actions;  //ACTION export ho raha hai mainly
+export const {addData, showData, decrementData} = showSlice.actions;  //ACTION export ho raha hai mainly
 
 export default showSlice.reducer;
