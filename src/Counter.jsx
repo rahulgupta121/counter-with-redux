@@ -17,13 +17,15 @@ const Counter = () => {
       </div>
 
       <div className="class-counter">
+        <ul className="list-decoration-none" style={{"list-style": "none"}}>
         <li title="decrement" href="/" onClick={()=>dispatch(decrementData())}>
-          <span>-</span>
+          <span style={{fontSize: "3rem"}}>-</span>
         </li>
         <input value={myData} />
         <li href="/" title="increment" onClick={()=>dispatch(addData())}>
-          <span>+</span>
+          <span style={{fontSize: "3rem"}}>+</span>
         </li>
+        </ul>
       </div>
     </div>
   );
